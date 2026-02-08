@@ -28,12 +28,12 @@ console.log(`obj is ${obj}`);
 
 // type aliases
 type Age = number;
-type Person = {
+type Human = {
   name: string;
   age: Age;
 };
 
-const anne: Person = {
+const anne: Human = {
   name: "Anne",
   age: 40,
 };
