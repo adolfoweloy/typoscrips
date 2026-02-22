@@ -22,3 +22,23 @@ function format(value: string | number) {
 
 format("hello"); // "HELLO"
 format(3.14159); // "3.14"
+
+// for defined types
+type Engineering = {
+  programmingLanguage: "typescript" | "java" | "go";
+  bestPractices: string;
+};
+
+type CompanyValues = {
+  values: string[];
+};
+
+type Onboarding = Engineering | CompanyValues;
+
+const devOnboarding: Onboarding = {
+  programmingLanguage: "java",
+  bestPractices: "declare variables before using",
+  values: ["be the change you seek"],
+};
+
+console.log(devOnboarding);

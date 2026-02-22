@@ -1,6 +1,7 @@
 // Intersection types — a value must satisfy ALL types at once
 // Unlike unions (A | B) where a value is one or the other,
 // an intersection (A & B) requires the value to have everything from both.
+// the resultint type must have values from both first and second set
 
 type HasName = {
   name: string;
