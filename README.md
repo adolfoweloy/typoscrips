@@ -28,3 +28,13 @@ npm run play -- src/unions.ts
 ```
 
 This is handy for experimenting with individual scripts as you work through the book's chapters.
+
+## Caveats
+
+Non-obvious TypeScript behaviors worth remembering:
+
+- **`let` widens, `const` narrows** — `let a = 1042` infers `number`, not `1042`. Only `const` infers the literal type.
+- **Arrays are not tuples by default** — `let a = [true, 1000]` infers `(boolean | number)[]`, not `[boolean, number]`.
+- **`const` doesn't freeze arrays** — `const g = [3]` infers `number[]`, not `[3]`. Use `as const` to get the literal tuple.
+- **`null` infers `any` without strict mode** — with `strictNullChecks` on (via `strict: true`) it infers `null` instead.
+- **Object values are widened** — `let e = { type: 'ficus' }` infers `{ type: string }`, not `{ type: 'ficus' }`.
