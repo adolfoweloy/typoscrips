@@ -4,6 +4,7 @@
     "module": "commonjs",
     "outDir": "dist",
     "rootDir": "src",
+    "lib": ["ES2022", "ESNext", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
