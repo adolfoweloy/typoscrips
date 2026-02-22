@@ -40,3 +40,4 @@ _"The day someone asks me why I don´t like TypeScript much, I'll show them this
 - **`?` means `T | undefined` on declarations, but `?.` guards against both `null` and `undefined`** — same character, different semantics depending on where you use it.
 - **You can declare a property as `string?` but not a return type as `string?`** — `name?: string` works. `function f(): string?` does not. For return types, you're forced to write `string | undefined`. No good reason, just an inconsistency.
 - **Object values are widened** — `let e = { type: 'ficus' }` infers `{ type: string }`, not `{ type: 'ficus' }`.
+- **`const enum` inlines values at compile time** — declaring an enum with `const` causes TypeScript to replace every usage with the raw numeric value in the compiled JS. The enum itself disappears entirely from the output. Same keyword, completely different runtime behavior.
