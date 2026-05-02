@@ -29,6 +29,11 @@ npm run play -- src/unions.ts
 
 This is handy for experimenting with individual scripts as you work through the book's chapters.
 
+## Running as a TypeScript worksheet
+
+When using the TypeScript Worksheet extension, scripts in this repo can be executed as worksheet.
+I have created a shortcut `Ctrl + K` to run it, but it can be found with `Ctrl + Shift + P` and `Run TypeScript Worksheet`.
+
 ## Rants (for posterity)
 
 _"The day someone asks me why I don´t like TypeScript much, I'll show them this list."_
